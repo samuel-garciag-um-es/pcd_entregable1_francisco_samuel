@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>240</x>
+      <y>618</y>
+      <w>210</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Profesor/
+--
++ asignaturas: list Asignatura
+--
++ añadirasignatura(asignatura: Asignatura)
++ eliminarasignatura(asignatura: Asignatura)
++ mostrar_asignatura()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>756</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Asociado
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>12</x>
+      <y>492</y>
+      <w>204</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Estudiante
+-
++ asignaturas: list Asignatura
+--
++ añadirasignatura(asignatura: Asignatura)
++ eliminarasignatura(asignatura: Asignatura)
++ mostrar_asignaturas()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>312</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Asignatura
+--
++ nombre : str
++ codigo : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>228</x>
+      <y>42</y>
+      <w>372</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Universidad
+--
++ nombre: str
++ ubicacion : str
+- listaalumno: list Estudiante
+- listamiembros: list MiembroDepartamento
+- listaasignatura : list Asignatura
+--
++ añadir_miembrodep(miembro: MiembroDepartamento)
++ eliminar_miembrodep(miembro: MiembroDepartamento)
++ añadir_alumno(alumno: Estudiante)
++ eliminar_alumno(alumno: Estudiante)
++ mostrar_miembros()
++ mostrar_alumnos()
++ cambio_departamento( miembro: Miembrodepartamento, nuevodepartamento: Departamento)
++ mostrar_asignaturas_profesor(persona = Profesor)
++ mostrar_asignaturas_alumno(persona: Estudiante)
++ añadir_asignatura_persona(persona : MiembroDepartamento o Estudiante, asignatura: Asignatura)
++ eliminar_asignatura_persona(persona : MiembroDepartamento o Estudiante, asignatura: Asignatura)
++ crear_asignatura(asignatura: Asigantura)
++ eliminar_asignatura(asignatura: Asignatura)
++ mostrar_asignatura()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>756</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Titular
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>348</x>
+      <y>330</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Persona/
+--
++ nombre : str
++ dni : str
++ direccion : str
++ sexo : Sexo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>690</y>
+      <w>84</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;60.0;120.0;60.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>690</y>
+      <w>120</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>180.0;110.0;180.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>624</y>
+      <w>126</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Investigador
+--
++ area:str</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>360</y>
+      <w>216</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+m1= 1..n
+m2= 1..n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;310.0;130.0;310.0;430.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>654</y>
+      <w>102</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;60.0;150.0;60.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>402</y>
+      <w>78</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>110.0;120.0;110.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>402</y>
+      <w>300</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;90.0;480.0;90.0;480.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>348</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Sexo
+--
+V
+M</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>366</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1
+m2= 1..n
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>474</y>
+      <w>246</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/MiembroDepartamento/
+--
++ nombre: str
++ dni: str  
++ direccion: str 
++ sexo: Sexo
++ departamento: Departamento
+--
++ cambiodepartamento(nuevodepartamento: Departamento )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>678</x>
+      <y>486</y>
+      <w>126</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Departamento
+--
+DIIC
+DITEC 
+DIS</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>564</y>
+      <w>126</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;190.0;50.0;190.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>564</y>
+      <w>132</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;50.0;10.0;50.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>510</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1
+m2= 1..n
+bg=BLACK</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>246</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 0..n
+m2= 1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>78</x>
+      <y>360</y>
+      <w>36</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+m1= 1..n
+m2= 1..n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>864</x>
+      <y>282</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>python</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>996</x>
+      <y>282</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Universidad</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1272</x>
+      <y>288</y>
+      <w>108</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>MiembroDepartamento</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>294</y>
+      <w>18</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;1130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>294</y>
+      <w>18</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;1130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1314</x>
+      <y>300</y>
+      <w>18</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;380.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>858</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>840</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+mostrar_miembros()</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>318</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+cambio_departamento(m,n)</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>342</y>
+      <w>312</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+cambiodepartamento(n)</panel_attributes>
+    <additional_attributes>10.0;20.0;500.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1290</x>
+      <y>570</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Estudiante</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1314</x>
+      <y>582</y>
+      <w>18</w>
+      <h>402</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;650.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>462</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+añadir_asignatura(p,a)</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>480</y>
+      <w>450</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+añadirasignatura(a)</panel_attributes>
+    <additional_attributes>10.0;20.0;730.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>180</y>
+      <w>270</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>mostrarmiembros= mostraralumnos=mostrarasigntatura
+añadir miembro=eliminar:_miembro=añadiralumno=eliminaralumno
+añadirassigantura_persona=eliminarasignatura_persona
+crear_asignatura=eliminarasignatura</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>486</y>
+      <w>324</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+                                                     añadirasignatura(a)</panel_attributes>
+    <additional_attributes>30.0;10.0;150.0;10.0;150.0;220.0;520.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1146</x>
+      <y>288</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Persona</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>300</y>
+      <w>18</w>
+      <h>684</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;1120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1434</x>
+      <y>288</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>Profesor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1452</x>
+      <y>300</y>
+      <w>24</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;1130.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>768</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+añadir_alumno(a)</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>786</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>372</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+mostrar_asignatura_profesor(p)</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>390</y>
+      <w>456</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+mostrar_asignaturas()</panel_attributes>
+    <additional_attributes>10.0;20.0;740.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>408</y>
+      <w>588</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;960.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>672</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+mostrar_asignatura_profesor(p)</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>690</y>
+      <w>312</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+mostrar_asignaturas()</panel_attributes>
+    <additional_attributes>10.0;20.0;500.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>708</y>
+      <w>444</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;720.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>906</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;
+crear_asignatura(a)</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>924</y>
+      <w>150</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+</diagram>
